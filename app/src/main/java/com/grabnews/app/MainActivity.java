@@ -224,11 +224,8 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             realm.commitTransaction();
         }
 
-        Log.d(TAG,"haha");
         realm.beginTransaction();
-        Log.d(TAG,"nahi 3");
         for(NewsData nsdata : articles) {
-            Log.d(TAG,"nahi");
             NewsSchema data = realm.createObject(NewsSchema.class);
 
             data.setId(nsdata.getSource().getId());
